@@ -1,3 +1,6 @@
+## Link of the model deployed in heroku : https://deploy-class-heroku-sbrs.herokuapp.com/
+import json
+
 from flask import Flask, jsonify,  request, render_template
 
 import numpy as np
@@ -18,8 +21,8 @@ def predict():
             final_recomm = recommendation(user_name[0])
             final_file = final_recomm.to_json(orient = 'records')
         else:
-            final_file = 'User_name is not valid'
-        return render_template('index.html', prediction_text='Product Recommendation {}'.format(final_file))
+            final_file = json.dumps({'name':'User_name is not valid'})
+        return render_template('index.html', prediction_text=final_file)
 
     else :
         return render_template('index.html')

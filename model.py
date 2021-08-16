@@ -1,6 +1,6 @@
 import pickle
 import pandas as pd
-
+## Link of the model deployed in heroku : https://deploy-class-heroku-sbrs.herokuapp.com/
 ## Load the user recommendation model and sentiment classification model
 import requests
 
