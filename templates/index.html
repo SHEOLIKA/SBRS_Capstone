@@ -30,10 +30,13 @@
 
  </div>
 <div>
-        <table class="table table-sm" id="table" data-height="460">
+ <h3 style="text-align:center">Top Product Recommendations </h3>
+</div>
+<div class="center">
+        <table class="center" id="table" data-height="460">
             <thead class="table-dark">
                 <tr>
-                 <th data-field="name">Top Product Recommendations</th>
+                 <th data-field="name"></th>
                 </tr>
              </thead>
         </table>
@@ -57,7 +60,7 @@
 
         var $table = $('#table');
         var mydf= {{prediction_text  | safe}};
-        alert(mydf)
+        
         $(function () {
             $('#table').bootstrapTable({
                 data: mydf
